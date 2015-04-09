@@ -18,17 +18,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set colorView on launch
-        changeColorComponent()
+        // Do any additional setup after loading the view, typically from a nib.
     }
     
-    @IBAction func changeColorComponent() {
-        
-        // Make sure the program doesn't crash if the controls aren't connected
-        if self.redControl == nil {
-            return
-        }
+    @IBAction func changeColorComponent(sender: AnyObject) {
         
         let r: CGFloat = self.redControl.on ? 1 : 0
         let g: CGFloat = self.greenControl.on ? 1 : 0
