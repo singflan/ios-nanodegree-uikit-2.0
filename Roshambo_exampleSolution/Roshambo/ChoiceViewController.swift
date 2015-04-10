@@ -11,7 +11,7 @@ class ChoiceViewController: UIViewController {
     // MARK: Programmatic Approach
 
     @IBAction private func playRock(sender: UIButton) {
-        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("ResultsViewController") as ResultsViewController
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("ResultsViewController") as! ResultsViewController
         vc.userChoice = getUserShape(sender)
         presentViewController(vc, animated: true, completion: nil)
     }
@@ -26,8 +26,8 @@ class ChoiceViewController: UIViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "play" {
-            let vc = segue.destinationViewController as ResultsViewController
-            vc.userChoice = getUserShape(sender as UIButton)
+            let vc = segue.destinationViewController as! ResultsViewController
+            vc.userChoice = getUserShape(sender as! UIButton)
         }
     }
 
