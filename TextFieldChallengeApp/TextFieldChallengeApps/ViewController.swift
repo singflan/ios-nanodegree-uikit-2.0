@@ -42,7 +42,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func toggleTheTextEditor(sender: AnyObject) {
         
-        if !(sender as UISwitch).on {
+        if !(sender as! UISwitch).on {
             self.textField3.resignFirstResponder()
         }
     }
