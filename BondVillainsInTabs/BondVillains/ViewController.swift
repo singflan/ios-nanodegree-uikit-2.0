@@ -14,10 +14,6 @@ class ViewController: UIViewController, UITableViewDataSource {
     // This is an array of Villain instances
     let allVillains = Villain.allVillains
     
-    
-
-    
-    
     // MARK: Table View Data Source
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,7 +22,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("VillainCell") as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("VillainCell") as! UITableViewCell
         let villain = self.allVillains[indexPath.row]
         
         // Set the name and image
@@ -43,7 +39,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("VillainDetailViewController")! as VillainDetailViewController
+        let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("VillainDetailViewController") as! VillainDetailViewController
         detailController.villain = self.allVillains[indexPath.row]
         self.navigationController!.pushViewController(detailController, animated: true)
     

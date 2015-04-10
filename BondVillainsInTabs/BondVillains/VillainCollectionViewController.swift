@@ -19,13 +19,18 @@ class VillainCollectionViewController: UIViewController, UICollectionViewDataSou
     
     // MARK: Table View Data Source
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.hidden = false
+    }
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.allVillains.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("VillainCollectionViewCell", forIndexPath: indexPath) as VillainCollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("VillainCollectionViewCell", forIndexPath: indexPath) as! VillainCollectionViewCell
         let villain = self.allVillains[indexPath.row]
         
         // Set the name and image
@@ -39,7 +44,7 @@ class VillainCollectionViewController: UIViewController, UICollectionViewDataSou
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath)
     {
         
-        let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("VillainDetailViewController")! as VillainDetailViewController
+        let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("VillainDetailViewController") as! VillainDetailViewController
         detailController.villain = self.allVillains[indexPath.row]
         self.navigationController!.pushViewController(detailController, animated: true)
         
