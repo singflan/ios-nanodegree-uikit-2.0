@@ -47,7 +47,7 @@ class RockPaperScissorsViewController: UIViewController {
         if (playersMove == RPS.Rock) {
             // Get the storyboard and ResultViewController
             var storyboard = UIStoryboard (name: "Main", bundle: nil)
-            var resultVC = storyboard.instantiateViewControllerWithIdentifier("ResultViewController") as ResultViewController
+            var resultVC = storyboard.instantiateViewControllerWithIdentifier("ResultViewController") as! ResultViewController
         
             // Communicate the match
             resultVC.match = self.match
@@ -66,7 +66,7 @@ class RockPaperScissorsViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         //Notice that this code works for both Scissors and Paper
-        let controller = segue.destinationViewController as ResultViewController
+        let controller = segue.destinationViewController as! ResultViewController
         controller.match = self.match
     }
     
