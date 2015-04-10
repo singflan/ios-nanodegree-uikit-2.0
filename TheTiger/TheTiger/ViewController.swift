@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     func startOver() {
         
-        if let navigationController = self.navigationController? {
+        if let navigationController = self.navigationController {
             navigationController.popToRootViewControllerAnimated(true)
         }
     }
