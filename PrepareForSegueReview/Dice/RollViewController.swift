@@ -14,7 +14,8 @@ class RollViewController: UIViewController {
         
         if segue.identifier == "rollDice" {
             
-            let controller = segue.destinationViewController as! DiceViewController
+            let controller = segue.destinationViewController as!
+            DiceViewController
             
             controller.firstValue = self.randomDiceValue()
             controller.secondValue = self.randomDiceValue()
