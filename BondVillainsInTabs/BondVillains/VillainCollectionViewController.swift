@@ -10,7 +10,7 @@ import Foundation
 
 import UIKit
 
-class VillainCollectionViewController: UIViewController, UICollectionViewDataSource {
+class VillainCollectionViewController: UICollectionViewController, UICollectionViewDataSource {
     
     // Get ahold of some villains, for the table
     // This is an array of Villain instances
@@ -24,24 +24,24 @@ class VillainCollectionViewController: UIViewController, UICollectionViewDataSou
         self.tabBarController?.tabBar.hidden = false
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.allVillains.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("VillainCollectionViewCell", forIndexPath: indexPath) as! VillainCollectionViewCell
         let villain = self.allVillains[indexPath.row]
         
         // Set the name and image
-        cell.nameLabel.text = villain.name
+        //cell.nameLabel.text = villain.name
         cell.villainImageView?.image = UIImage(named: villain.imageName)
-        cell.schemeLabel.text = "Scheme: \(villain.evilScheme)"
+        //cell.schemeLabel.text = "Scheme: \(villain.evilScheme)"
         
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath)
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath)
     {
         
         let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("VillainDetailViewController") as! VillainDetailViewController
