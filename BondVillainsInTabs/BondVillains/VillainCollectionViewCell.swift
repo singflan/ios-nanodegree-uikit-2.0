@@ -11,8 +11,8 @@ import UIKit
 class VillainCollectionViewCell: UICollectionViewCell {
  
     @IBOutlet weak var villainImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+    //@IBOutlet weak var nameLabel: UILabel!
     
-    @IBOutlet weak var schemeLabel: UILabel!
+    //@IBOutlet weak var schemeLabel: UILabel!
     
 }
