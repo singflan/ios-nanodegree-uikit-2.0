@@ -40,7 +40,7 @@ class EmojiTextFieldDelegate : NSObject, UITextFieldDelegate {
         for (emojiString, emoji) in translations {
         
             // Search for all occurances of key (ie. "dog"), and replace with emoji (ie. 🐶)
-            do {
+            repeat {
                 emojiStringRange = newText.rangeOfString(emojiString, options: NSStringCompareOptions.CaseInsensitiveSearch)
             
                 // found one
