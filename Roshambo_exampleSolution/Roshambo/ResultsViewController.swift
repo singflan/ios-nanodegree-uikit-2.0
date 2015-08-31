@@ -48,7 +48,6 @@ class ResultsViewController: UIViewController {
     private func displayResult() {
         // Ideally, most of this would be handled by a model.
         var imageName: String
-        var imageNameString: String
         var text: String
         let matchup = "\(userChoice.rawValue) vs. \(opponentChoice.rawValue)"
 
