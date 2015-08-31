@@ -165,6 +165,8 @@
 		4D08C4971A14360900A95F43 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Udacity;
 				TargetAttributes = {
@@ -417,6 +419,7 @@
 				4D08C4C01A14360900A95F43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D08C4C11A14360900A95F43 /* Build configuration list for PBXNativeTarget "TextFieldChallengeAppsTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +428,7 @@
 				4D08C4C31A14360900A95F43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

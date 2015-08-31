@@ -26,7 +26,7 @@ class CashTextFieldDelegate: NSObject, UITextFieldDelegate {
         }
         
         // Format the new string
-        if let numOfPennies = digitText.toInt() {
+        if let numOfPennies = Int(digitText) {
             newText = "$" + self.dollarStringFromInt(numOfPennies) + "." + self.centsStringFromInt(numOfPennies)
         } else {
             newText = "$0.00"
