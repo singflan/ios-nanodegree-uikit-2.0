@@ -40,7 +40,7 @@ enum RPS {
 }
 
 
-extension RPS: Printable {
+extension RPS: CustomStringConvertible {
     
     var description: String {
         get {
