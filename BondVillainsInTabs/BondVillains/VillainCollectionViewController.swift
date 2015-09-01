@@ -10,7 +10,7 @@ import Foundation
 
 import UIKit
 
-class VillainCollectionViewController: UICollectionViewController, UICollectionViewDataSource {
+class VillainCollectionViewController: UICollectionViewController {
  
     //TODO: Add outlet to flowLayout here.
     
