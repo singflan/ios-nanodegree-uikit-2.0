@@ -10,10 +10,10 @@ import Foundation
 
 import UIKit
 
-class VillainCollectionViewController: UICollectionViewController, UICollectionViewDataSource {
+class VillainCollectionViewController: UICollectionViewController {
     
     // Get ahold of some villains, for the table
-    // This is an array of Villain instances
+    // This is an array of Villain instances.
     let allVillains = Villain.allVillains
     
     
@@ -21,7 +21,6 @@ class VillainCollectionViewController: UICollectionViewController, UICollectionV
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.hidden = false
     }
-    
     
     
     // MARK: Collection View Data Source
