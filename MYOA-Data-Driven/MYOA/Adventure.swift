@@ -27,7 +27,7 @@ class Adventure {
         storyNodes = [String : StoryNode]()
         
         // Add a Story Node for each item in storyNodesDictionary
-        for (key: String, dictionary: AnyObject) in storyNodesDictionary {
+        for (key, dictionary) in storyNodesDictionary {
             storyNodes[key] = StoryNode(dictionary: dictionary as! [String : AnyObject], adventure: self)
         }
         

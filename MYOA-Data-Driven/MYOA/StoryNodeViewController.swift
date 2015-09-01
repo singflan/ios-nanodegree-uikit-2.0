@@ -54,7 +54,7 @@ class StoryNodeViewController: UIViewController, UITableViewDelegate, UITableVie
         func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             
             //Dequeue a cell and populate it with text from the correct prompt.
-            let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! UITableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("Cell")!
             cell.textLabel!.text = storyNode.promptForIndex(indexPath.row)
             return cell
         }
@@ -63,7 +63,7 @@ class StoryNodeViewController: UIViewController, UITableViewDelegate, UITableVie
     // MARK: - Actions
     
     @IBAction func restartStory() {
-        let controller = self.navigationController!.viewControllers[1] as! UIViewController
+        let controller = self.navigationController!.viewControllers[1] 
         self.navigationController?.popToViewController(controller, animated: true)
     }
     
