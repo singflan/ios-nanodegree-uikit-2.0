@@ -37,8 +37,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
       
-        let cell = tableView.dequeueReusableCellWithIdentifier("FavoriteThingCell") as! UITableViewCell
-        var favoriteThingForRow = self.favoriteThings[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("FavoriteThingCell")!
+        let favoriteThingForRow = self.favoriteThings[indexPath.row]
         cell.textLabel?.text = favoriteThingForRow
         
         return cell
