@@ -13,7 +13,7 @@ class CashTextFieldDelegate: NSObject, UITextFieldDelegate {
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         
-        var oldText = textField.text as NSString
+        let oldText = textField.text! as NSString
         var newText = oldText.stringByReplacingCharactersInRange(range, withString: string)
         var newTextString = String(newText)
         
@@ -38,7 +38,7 @@ class CashTextFieldDelegate: NSObject, UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        if textField.text.isEmpty {
+        if textField.text!.isEmpty {
             textField.text = "$0.00"
         }
     }
